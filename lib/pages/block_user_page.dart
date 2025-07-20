@@ -37,6 +37,66 @@
 
 
 
+// import 'package:flutter/material.dart';
+// import '../models/user.dart';
+// import 'add_user_page.dart';
+
+// class BlockUserPage extends StatefulWidget {
+//   @override
+//   State<BlockUserPage> createState() => _BlockUserPageState();
+// }
+
+// class _BlockUserPageState extends State<BlockUserPage> {
+//   void toggleBlock(User user) {
+//     setState(() {
+//       user.isBlocked = !user.isBlocked;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     final users = AddUserPage.userList;
+
+//     return Scaffold(
+//       appBar: AppBar(title: const Text("Block Users")),
+//       body: users.isEmpty
+//           ? const Center(child: Text('No users added yet.'))
+//           : ListView.builder(
+//               itemCount: users.length,
+//               itemBuilder: (context, index) {
+//                 final user = users[index];
+//                 return Card(
+//                   color: user.isBlocked ? Colors.red[100] : Colors.green[100],
+//                   margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
+//                   child: ListTile(
+//                     title: Text(user.name),
+//                     subtitle: Text('${user.email} • ${user.role}'),
+//                     trailing: ElevatedButton(
+//                       style: ElevatedButton.styleFrom(
+//                         backgroundColor: user.isBlocked ? Colors.green : Colors.red,
+//                       ),
+//                       onPressed: () => toggleBlock(user),
+//                       child: Text(user.isBlocked ? "Unblock" : "Block"),
+//                     ),
+//                   ),
+//                 );
+//               },
+//             ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 import 'package:flutter/material.dart';
 import '../models/user.dart';
 import 'add_user_page.dart';
@@ -58,7 +118,7 @@ class _BlockUserPageState extends State<BlockUserPage> {
     final users = AddUserPage.userList;
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Block Users")),
+      appBar: AppBar(title: const Text("Block Users"), backgroundColor: Colors.indigo),
       body: users.isEmpty
           ? const Center(child: Text('No users added yet.'))
           : ListView.builder(
@@ -85,4 +145,3 @@ class _BlockUserPageState extends State<BlockUserPage> {
     );
   }
 }
-

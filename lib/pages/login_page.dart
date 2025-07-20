@@ -191,7 +191,7 @@ class LoginPage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           const Text(
-                            'Admin Login',
+                            'Login',
                             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(height: 20),
